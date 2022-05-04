@@ -1,0 +1,29 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<h1>Insertar una pelicula</h1>
+
+<div class="row">
+    <div class="col-md-8">
+        <section id="PeliculaForm">
+            <form action="." method="post" class="form-horizontal">
+                {% csrf_token %}
+                <h4>Insertar una pelicula</h4>
+                <hr/>
+                <table>
+                    {{form.as_table}}
+                </table>
+                 <input type="submit" value="Guardar Pelicula" class="btn btn-default" />
+                </div>
+            </form>
+        </section>
+    </div>
+    <div class="col-md-4">
+        <section id="sForm"></section>
+    </div>
+</div>
+
+{% endblock %}
