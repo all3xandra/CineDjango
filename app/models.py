@@ -13,6 +13,8 @@ class Pelicula(models.Model):
 	genero = models.CharField(max_length=60)
 	sinopsis = models.CharField(max_length=700)
 	votos = models.IntegerField(validators=[MaxValueValidator(99999999999)])
+	imagen = models.CharField(max_length=700)
+
 
 	def __unicode__(self):
 		return self.titulo
