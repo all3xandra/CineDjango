@@ -129,7 +129,7 @@ def new_pelicula(request):
         form = PeliculaForm()
         return render(request, 'app/new_pelicula.html', {'form': form})
     if request.method == "POST":
-        form = PeliculaForm(request.POST)
+        form = PeliculaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save();
             return HttpResponseRedirect('../peliculas')

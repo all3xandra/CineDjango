@@ -5,6 +5,7 @@ Definition of models.
 from django.db import models
 from django.contrib.auth.models import User
 from django.core.validators import MaxValueValidator
+import PIL
 
 class Pelicula(models.Model):
 	titulo = models.CharField(max_length=100)
@@ -13,8 +14,7 @@ class Pelicula(models.Model):
 	genero = models.CharField(max_length=60)
 	sinopsis = models.CharField(max_length=700)
 	votos = models.IntegerField(validators=[MaxValueValidator(99999999999)])
-	imagen = models.CharField(max_length=700)
-
+	imagen = models.ImageField(upload_to ='uploads/')
 
 	def __unicode__(self):
 		return self.titulo

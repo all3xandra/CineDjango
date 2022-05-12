@@ -6,7 +6,7 @@
     <RootNamespace>CineDjango</RootNamespace>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <SuppressConfigureTestFrameworkPrompt>true</SuppressConfigureTestFrameworkPrompt>
-    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <InterpreterId>MSBuild|env1|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -72,7 +72,6 @@
     <Content Include="app\templates\app\registro.html" />
     <Content Include="app\templates\app\genero.html" />
     <Content Include="app\templates\app\voto.html" />
-    <Content Include="db.sqlite3" />
     <None Include="Properties\PublishProfiles\VamosAlCine20220303123020 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\VamosAlCine20220303123020 - Web Deploy.pubxml" />
     <Content Include="requirements.txt" />
@@ -105,6 +104,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Interpreter Include="env1\">
+      <Id>env1</Id>
+      <Version>3.9</Version>
+      <Description>env1 (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
     <Interpreter Include="env\">
       <Id>env</Id>
       <Version>3.9</Version>
